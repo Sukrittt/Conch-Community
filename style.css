@@ -1,0 +1,2920 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+::-webkit-scrollbar{
+    width : .7em;
+}
+::-webkit-scrollbar-track{
+    background: hsl(0, 0%, 12%);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 100vw;
+    background: hsl(0, 0%, 67%);
+    border: 2px solid hsl(0, 0%, 12%);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: hsl(0, 0%, 44%);
+}
+.navbar{
+    background-color: black;
+    gap: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.container-fluid{
+    gap: 2em;
+    text-decoration: none;
+    color: whitesmoke;
+}
+.container-fluid a,.container-fluid span{
+    text-decoration: none;
+    transition: color 300ms;
+}
+.nav-button{
+    color: whitesmoke;
+    font-size: 0.8em;
+}
+.container-fluid a:hover,.container-fluid span:hover{
+    color:#fdd302;
+}
+.nav-item{
+    list-style: none;
+}
+
+.text-heading{
+    color: whitesmoke;
+    font-size: 6em;
+    opacity: 0;
+    transition: 2.5s;
+}
+.text-heading[data-scroll="in"]{
+    opacity: 1;
+}
+.main-heading{
+    background-color: black;
+    padding: 4em 2em 30em 4em;
+}
+.community-heading{
+    margin-left: 2.8em;
+}
+.share-your-thoughts{
+    font-size: 4em;
+    color: whitesmoke;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    left: 30%;
+    cursor: pointer;
+    top: -150px;
+    transition: color 300ms;
+    opacity: 0;
+    transition: 1.5s;
+    transform: translateX(-400px);
+    color:#f19e39;
+}
+.share-your-thoughts[data-scroll="in"]{
+    transform: translateX(0);
+    opacity: 1;
+}
+::placeholder{
+    color: white;
+    opacity: .8;
+    margin-left: .5em;
+}
+
+#comment{
+    position: relative;
+    width: 50%;
+    left : 37.5%;
+    outline: none;
+    border:none;
+    background-color: black;
+    color: #F2ECFF;
+    border-radius:4px;
+    padding: .9em .5em;
+    resize: none;
+}
+#comment:focus{
+    background-color: rgb(40, 37, 37);
+    transition: 300s;
+}
+.share-thought-btn{
+    position: relative;
+    top : -25px;
+    left: 39%;
+    padding: .8em 1.5em;
+    color: #F2ECFF;
+    background-color: black;
+    transition: color 150ms, background-color 150ms;
+}
+
+.share-thought-btn:hover{
+    color: #f19e39;
+}
+.comment-display{
+    position: relative;
+    top: -130px;
+    margin-top: -212px;
+    margin-left: 2.5em;
+    max-height: 353px;
+    display: grid;
+    flex-direction: row;
+    justify-content: right;
+    overflow-y: scroll;
+}
+textarea{
+    transition: 1.5s;
+    opacity: 0;
+    transform: translateX(-10px);
+}
+textarea[data-scroll="in"]{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.share-thought-btn{
+    transition: 150ms;
+    opacity: 0;
+}
+.share-thought-btn[data-scroll="in"]{
+    opacity: 1;
+}
+.conch-heading{
+    color:#f19e39;
+    position: relative;
+    left: .8em;
+    text-align: left;
+    font-size: 9.2em;
+}
+.page-two{
+    background-color: #fdf3d0;
+    padding-bottom: 20em;
+    padding-top: 4em;
+    overflow-y: hidden;
+}
+img{
+    opacity: 0;
+    transition: 2s;
+}
+img[data-scroll="in"]{
+    opacity: 1;
+}
+
+.information-section-one{
+    padding-bottom: 20em;
+    background-color: #100004;
+    color:#41fdfd;
+}
+.information-section-two{
+    padding-bottom: 20em;
+    background-color: black;
+    color: #763d49;
+}
+.information-section-three{
+    background-color: #24973f;
+    color:black;
+}
+
+.heading-section-one{
+    font-size: 3.4em;
+    position: relative;
+    font-weight: 600;
+    top: 3em;
+    left: 1.2em;
+}
+.text-section-one{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    position: relative;
+    top: 10em;
+    left: .8em;
+}
+.heading-section-two{
+    font-size: 3.4em;
+    position: relative;
+    top: 3em;
+    left: 2em;
+}
+.text-section-two{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    overflow-x: hidden;
+    position: relative;
+    top: 10em;
+    left: 2.75em;
+}
+.heading-section-three{
+    font-size: 3.4em;
+    position: relative;
+    top: 3em;
+    left: 1.2em;
+}
+.text-section-three{
+    font-size: 1.2em;
+    overflow-x: hidden;
+    position: relative;
+    top: 10em;
+    left: 5em;
+}
+.text-section-three li{
+    position: relative;
+    padding-bottom: .3em;
+    list-style-type: disc;
+    font-size: 1.3em;
+}
+.heading-section-one{
+    font-weight: 500;
+    transition: 1.5s;
+    opacity: 0;
+}
+.heading-section-one[data-scroll="in"]{
+    opacity: 1;
+}
+.text-section-one{
+    transition: 1.5s;
+    transition-delay: .8s;
+    opacity: 0;
+}
+.text-section-one[data-scroll="in"]{
+    opacity: 1;
+}
+.heading-section-two{
+    transition: 1.5s;
+    opacity: 0;
+}
+.heading-section-two[data-scroll="in"]{
+    opacity: 1;
+}
+.text-section-two{
+    transition: 1.5s;
+    transition-delay: .8s;
+    opacity: 0;
+}
+.text-section-two[data-scroll="in"]{
+    opacity: 1;
+}
+.heading-section-three{
+    transition: 1.5s;
+    opacity: 0;
+}
+.heading-section-three[data-scroll="in"]{
+    opacity: 1;
+}
+.text-section-three{
+    transition: 1.5s;
+    transition-delay: .8s;
+    opacity: 0;
+}
+.text-section-three[data-scroll="in"]{
+    opacity: 1;
+}
+img{
+    transition: 1.5s;
+    transition-delay: .8s;
+    opacity: 0;
+}
+img[data-scroll="in"]{
+    opacity: 1;
+}
+.footer-flexbox{
+    overflow-y: hidden;
+    background-color: black;
+    color:white;
+    display: flex;
+    flex-direction: row;
+    gap :8em;
+    padding-bottom: 2.5em;
+}
+.footer-heading-one{
+    font-size: 3em;
+    margin-top: 1em;
+    margin-left:.3em;
+    width :32%;
+    border-right: 5px solid white;
+}
+.join-us{
+    position: relative;
+    font-size: 3em;
+    top: 1em;
+    left: .5em;
+    padding-right: 4em;
+    height: 1.5em;
+    border-right: 5px solid white;
+}
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2.5em;
+    gap : .5em;
+}
+
+/* Coding Done For Responsive Layouts*/
+@media screen and (min-width: 2100px){
+    .container-fluid a, .conch-logo{
+        font-size: 1.3em;
+    }
+    .main-heading{
+        padding-bottom: 20%;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: .75em;
+        left: 0;
+        font-size: 10em;
+    }
+    .page-two{
+        padding-bottom: 40em;
+    }
+    .comment_image{
+        left: -1300px;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .share-your-thoughts{
+        font-size: 3.25em;
+        left: 24%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 7em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 2.5em;
+    }
+    .information-image{
+        margin-top: -6em;
+        left: 1600px;
+        height: 700px;
+    }
+    .footer-flexbox{
+        gap: 20em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 3em;
+    }
+    .join-us{
+        margin-right: 3em;
+    }
+    .contact-us{
+        margin-left: -10em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 2100px) and (min-width: 1980px){
+    .container-fluid a, .conch-logo{
+        font-size: 1.3em;
+    }
+    .main-heading{
+        padding-bottom: 25%;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: .75em;
+        left: 0;
+        font-size: 10em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .comment_image{
+        left: -1250px;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .share-your-thoughts{
+        font-size: 3em;
+        left: 20%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 7em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 2.5em;
+    }
+    .information-image{
+        left: 1350px;
+        margin-top: -6em;
+        height: 650px;
+    }
+    .footer-flexbox{
+        gap: 15em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 3em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+    }
+    .contact-us{
+        margin-left: -10em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1980px) and (min-width: 1880px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: .75em;
+        left: 0;
+        font-size: 10em;
+    }
+    .main-heading{
+        padding-bottom: 25%;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .comment_image{
+        left: -1050px;
+    }
+    .share-thought-btn{
+        font-size: 1.4em;
+        top: -28px;
+    }
+    .share-your-thoughts{
+        font-size: 2.5em;
+        left: 20%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 7em;
+        left: 1em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 2.5em;
+        left: 0;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 1250px;
+        margin-top: -6em;
+        height: 600px;
+    }
+    .footer-flexbox{
+        gap: 15em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 3em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+    }
+    .contact-us{
+        margin-left: -10em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1920px) and (min-width: 1880px){
+    .footer-flexbox{
+        gap: 10em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 3em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+    }
+    .contact-us{
+        margin-left: -10em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1880px) and (min-width: 1740px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: .75em;
+        left: 0;
+        font-size: 10em;
+    }
+    .main-heading{
+        padding-bottom: 27.5%;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .comment_image{
+        left: -900px;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 7em;
+        left: 1em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 2.2em;
+        left: .5em;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 1150px;
+        margin-top: -6em;
+        height: 600px;
+    }
+    .comment_image{
+        left: -1050px;
+    }
+    .share-your-thoughts{
+        font-size: 2.5em;
+        left: 21%;
+    }
+    .footer-flexbox{
+        gap: 10em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 3em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+    }
+    .contact-us{
+        margin-left: -10em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1740px) and (min-width: 1650px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: .75em;
+        left: 0;
+        font-size: 10em;
+    }
+    .main-heading{
+        padding-bottom: 30%;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .comment_image{
+        left: -900px;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 6em;
+        left: 1em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 2.1em;
+        left: .3em;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 1050px;
+        margin-top: -6em;
+        height: 550px;
+    }
+    .comment_image{
+        left: -950px;
+    }
+    .share-your-thoughts{
+        font-size: 2.25em;
+        left: 22%;
+    }
+    .footer-flexbox{
+        gap: 10em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 3em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+    }
+    .contact-us{
+        margin-left: -10em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1720px) and (min-width: 1650px){
+    .footer-flexbox{
+        gap: 5em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 2em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: .5em;
+        padding-right: 3em;
+    }
+    .contact-us{
+        margin-left: -7em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1650px) and (min-width: 1585px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1em;
+        left: 0;
+        font-size: 9em;
+    }
+    .main-heading{
+        padding-bottom: 31%;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .comment_image{
+        left: -900px;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 6em;
+        left: 1em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 2em;
+        left: .3em;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 1000px;
+        margin-top: -6em;
+        height: 550px;
+    }
+    .comment_image{
+        left: -950px;
+    }
+    .share-your-thoughts{
+        font-size: 2.25em;
+        left: 22%;
+    }
+    .footer-flexbox{
+        gap: 5em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 2em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: .5em;
+        padding-right: 3em;
+    }
+    .contact-us{
+        margin-left: -7em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1585px)
+and (min-width: 1530px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1em;
+        left: 0;
+        font-size: 9em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 32.5%;
+    }
+    .comment_image{
+        left: -900px;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5em;
+        left: 1em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.9em;
+        left: .3em;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 950px;
+        margin-top: -6em;
+        height: 500px;
+    }
+    .comment_image{
+        left: -950px;
+        height: 450px;
+    }
+    .share-your-thoughts{
+        font-size: 2.25em;
+        left: 20%;
+    }
+    .footer-flexbox{
+        gap: 5em;
+    }
+    .footer-heading-one{
+        height: 1.6em;
+        margin-left: 2em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: .5em;
+        padding-right: 3em;
+    }
+    .contact-us{
+        margin-left: -7em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1530px) and
+(min-width: 1470px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1em;
+        left: 0;
+        font-size: 9em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 34%;
+    }
+    .comment_image{
+        left: -900px;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5em;
+        left: 1em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.9em;
+        left: .3em;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 950px;
+        margin-top: -6em;
+        height: 500px;
+    }
+    .comment_image{
+        left: -850px;
+        margin-top: -1em;
+        height: 400px;
+    }
+    .share-your-thoughts{
+        left: 18%;
+        top: -100px;
+        font-size: 2em;
+    }
+    #comment{
+        margin-bottom: 6.7em;
+        top: 100px;
+    }
+    .footer-flexbox{
+        gap: 3em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: .5em;
+        padding-right: 3em;
+    }
+    .contact-us{
+        margin-left: -6em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1470px)
+and (min-width: 1400px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1.25em;
+        left: 0;
+        font-size: 8em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 32.5%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5em;
+        left: 1em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.85em;
+        left: .3em;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 900px;
+        margin-top: -6em;
+        height: 500px;
+    }
+    .comment_image{
+        left: 50px;
+        margin-top: -8em;
+        height: 450px;
+    }
+    .share-your-thoughts{
+        left: 15%;
+        top: 0;
+        font-size: 2.25em;
+    }
+    #comment{
+        margin-bottom: 2.5em;
+        top: 40px;
+    }
+    .footer-flexbox{
+        gap: 3em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: .5em;
+        padding-right: 3em;
+    }
+    .contact-us{
+        margin-left: -6em;
+        margin-top: 2em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1400px) and
+(min-width: 1360px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1.25em;
+        left: 0;
+        font-size: 8em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 32.5%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5em;
+        left: .75em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.8em;
+        left: -1em;
+    }
+    .text-section-three{
+        left: 2.5em;
+    }
+    .information-image{
+        left: 850px;
+        margin-top: -6em;
+        height: 500px;
+    }
+    .comment_image{
+        left: 35px;
+        margin-top: -8em;
+        height: 450px;
+    }
+    .share-your-thoughts{
+        left: 17%;
+        font-size: 2.25em;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 2.5em;
+        top: 40px;
+    }
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2.7em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: .5em;
+        padding-right: 3em;
+        font-size: 2.7em;
+    }
+    .contact-us{
+        margin-left: -5em;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1360px)
+and (min-width: 1300px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1.5em;
+        left: 0;
+        font-size: 7em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 40%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5em;
+        left: .75em;
+    }
+    .heading-section-three{
+        top: 2.5em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.7em;
+        left: -.5em;
+    }
+    .text-section-three{
+        left: 1.5em;
+        top: 8em;
+    }
+    .information-image{
+        left: 820px;
+        margin-top: -6em;
+        height: 450px;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 400px;
+    }
+    .share-your-thoughts{
+        left: 14%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 4em;
+        top: 80px;
+    }
+    .share-thought-btn{
+        top: -10px;
+    }
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2.5em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+        padding-right: 2.7em;
+        font-size: 2.5em;
+    }
+    .contact-us{
+        margin-left: -5em;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1300px) and
+(min-width: 1235px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1.5em;
+        left: 0;
+        font-size: 7em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 42.5%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5em;
+        left: .75em;
+    }
+    .heading-section-three{
+        top: 2.5em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.6em;
+        left: -.5em;
+    }
+    .text-section-three{
+        left: 1.5em;
+        top: 8em;
+    }
+    .information-image{
+        left: 770px;
+        margin-top: -6em;
+        height: 450px;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 400px;
+    }
+    .share-your-thoughts{
+        left: 12%;
+        font-size: 2.25em;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 4em;
+        top: 80px;
+        left: 40%;
+        width: 45%;
+    }
+    .share-thought-btn{
+        left: 41%;
+        top: -10px;
+    }
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2.4em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+        padding-right: 2.7em;
+        font-size: 2.4em;
+    }
+    .contact-us{
+        margin-left: -5em;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1283px) and
+(min-width: 1235px){
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2.4em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+        padding-right: 2em;
+        font-size: 2.4em;
+    }
+    .contact-us{
+        margin-left: -6em;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1235px) and
+(min-width: 1180px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 1.5em;
+        left: 0;
+        font-size: 7em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 45%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 4.5em;
+        left: .75em;
+    }
+    .heading-section-three{
+        top: 2.5em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.5em;
+        left: -.5em;
+    }
+    .text-section-three{
+        left: 1.5em;
+        top: 8em;
+    }
+    .information-image{
+        left: 720px;
+        margin-top: -6em;
+        height: 450px;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 400px;
+    }
+    .share-your-thoughts{
+        font-size: 2.25em;
+        left: 10%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 4em;
+        top: 80px;
+        left: 45%;
+        width: 40%;
+    }
+    .share-thought-btn{
+        left: 46%;
+        top: -10px;
+    }
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2.4em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+        padding-right: 2em;
+        font-size: 2.4em;
+    }
+    .contact-us{
+        margin-left: -6em;
+        margin-top: 1.5em;
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 1180px) and
+(min-width: 1100px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 2em;
+        left: 0;
+        font-size: 6em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 47.5%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 4.5em;
+        left: .75em;
+    }
+    .heading-section-three{
+        top: 2.5em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.4em;
+        left: -.5em;
+    }
+    .text-section-three{
+        left: 1.4em;
+        top: 8em;
+    }
+    .information-image{
+        left: 700px;
+        margin-top: -6em;
+        height: 400px;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 400px;
+    }
+    .share-your-thoughts{
+        font-size: 2em;
+        left: 10%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 4em;
+        top: 80px;
+        left: 45%;
+        width: 40%;
+    }
+    .share-thought-btn{
+        left: 46%;
+        top: -10px;
+    }
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2.3em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+        padding-right: 2em;
+        font-size: 2.3em;
+    }
+    .contact-us{
+        margin-left: -6em;
+        margin-top: 1.3em;
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 1100px) and
+(min-width: 1050px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 2em;
+        left: 0;
+        font-size: 6em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 50%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 4.5em;
+        left: .75em;
+    }
+    .heading-section-three{
+        top: 2.5em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.3em;
+        left: -.5em;
+        margin-top: 1em;
+    }
+    .text-section-three{
+        left: 1.3em;
+        top: 8em;
+    }
+    .information-image{
+        left: 650px;
+        margin-top: -6em;
+        height: 400px;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 400px;
+    }
+    .share-your-thoughts{
+        font-size: 2em;
+        left: 9.5%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 4em;
+        top: 80px;
+        left: 47.5%;
+        width: 35%;
+    }
+    .share-thought-btn{
+        font-size: 1.2em;
+        top: -10px;
+        left: 50%;
+    }
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2.2em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+        padding-right: 1.5em;
+        font-size: 2.2em;
+    }
+    .contact-us{
+        margin-left: -6.5em;
+        margin-top: 1.3em;
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 1050px) and
+(min-width: 970px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 2.25em;
+        left: 0;
+        font-size: 5.5em;
+    }
+    .page-two{
+        padding-bottom: 35em;
+    }
+    .main-heading{
+        padding-bottom: 55%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5.5em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.75em;
+        left: -.5em;
+        top: 6em;
+    }
+    .text-section-three{
+        left: 1.3em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 300px;
+        margin-top: 25em;
+        height: 450px;
+    }
+    .information-section-three img{
+        margin-top: 35em;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 400px;
+    }
+    .share-your-thoughts{
+        font-size: 1.75em;
+        left: 10%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 4em;
+        top: 80px;
+        left: 47.5%;
+        width: 35%;
+    }
+    .share-thought-btn{
+        font-size: 1.2em;
+        top: -10px;
+        left: 50%;
+    }
+    .footer-flexbox{
+        gap: 4em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 2em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0;
+        padding-right: 1.5em;
+        font-size: 2em;
+    }
+    .contact-us{
+        margin-left: -6.5em;
+        margin-top: 1.3em;
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 970px) and
+(min-width: 900px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 2em;
+        left: 0;
+        font-size: 5.25em;
+    }
+    .page-two{
+        padding-bottom: 30em;
+    }
+    .main-heading{
+        padding-bottom: 55%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 5.25em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.5em;
+        left: -.5em;
+        top: 6em;
+    }
+    .text-section-three{
+        left: 1.3em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 300px;
+        margin-top: 25em;
+        height: 450px;
+    }
+    .information-section-three img{
+        margin-top: 35em;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 350px;
+    }
+    .share-your-thoughts{
+        font-size: 1.75em;
+        left: 9%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 8em;
+        top: 140px;
+        left: 47.5%;
+        width: 35%;
+    }
+    .share-thought-btn{
+        font-size: 1.2em;
+        top: -10px;
+        left: 50%;
+    }
+    .footer-flexbox{
+        gap: 2em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 1.75em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0px;
+        padding-right: 1.5em;
+        font-size: 1.75em;
+    }
+    .contact-us{
+        margin-left: -5.25em;
+        margin-top: 1.2em;
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 900px) and
+(min-width: 830px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 2.5em;
+        left: 0;
+        font-size: 5em;
+    }
+    .page-two{
+        padding-bottom: 30em;
+    }
+    .main-heading{
+        padding-bottom: 55%;
+    }
+    .share-thought-btn{
+        font-size: 1.5em;
+        top: -28px;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 4em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.25em;
+        left: -.5em;
+        top: 6em;
+    }
+    .text-section-three{
+        left: 1.3em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 250px;
+        margin-top: 20em;
+        height: 400px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: -8em;
+        height: 300px;
+    }
+    .share-your-thoughts{
+        font-size: 1.5em;
+        left: 9%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 12em;
+        top: 180px;
+        left: 41%;
+        width: 40%;
+    }
+    .share-thought-btn{
+        font-size: 1.2em;
+        top: -30px;
+        left: 42%;
+    }
+    .footer-flexbox{
+        gap: 2em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 1.75em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0px;
+        padding-right: 1.5em;
+        font-size: 1.75em;
+    }
+    .contact-us{
+        margin-left: -5.25em;
+        margin-top: 1.2em;
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 890px) and
+(min-width: 750px){
+    .footer-flexbox{
+        gap: 2em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 1.5em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0px;
+        padding-right: 1.25em;
+        font-size: 1.5em;
+    }
+    .contact-us{
+        margin-left: -5.25em;
+        margin-top: 1.2em;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 853px) and
+(min-width: 830px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 2.75em;
+        left: 0;
+        font-size: 4.25em;
+    }
+}
+@media screen and (max-width: 830px) and
+(min-width: 750px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 2.75em;
+        left: 0;
+        font-size: 4.25em;
+    }
+    .main-heading{
+        padding-bottom: 61%;
+    }
+    .page-two{
+        padding-bottom: 30em;
+    }
+    
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 4em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.25em;
+        left: -.5em;
+        top: 6em;
+    }
+    .text-section-three{
+        left: 1.3em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 200px;
+        margin-top: 20em;
+        height: 400px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 18em;
+        margin-top: 10em;
+        height: 300px;
+    }
+    .share-your-thoughts{
+        font-size: 1.5em;
+        left: 9%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 12em;
+        top: 0px;
+        left: 10%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: 1.2em;
+        top: -212px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        gap: 2em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: 1em;
+        width: 34%;
+        font-size: 1.5em;
+    }
+    .join-us{
+        margin-right: 3em;
+        left: 0px;
+        padding-right: 1.25em;
+        font-size: 1.5em;
+    }
+    .contact-us{
+        margin-left: -5.25em;
+        margin-top: 1.2em;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 750px) and
+(min-width: 700px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 3.25em;
+        left: 0;
+        font-size: 4em;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .main-heading{
+        padding-bottom: 65%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 4em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.25em;
+        left: -.5em;
+        top: 6em;
+    }
+    .text-section-three{
+        left: 1.3em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 200px;
+        margin-top: 20em;
+        height: 350px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 16em;
+        margin-top: 10em;
+        height: 300px;
+    }
+    .share-your-thoughts{
+        font-size: 1.5em;
+        left: 9%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 12em;
+        top: 0px;
+        left: 10%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: 1.2em;
+        top: -212px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 2.5em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 2.5em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 700px){
+    .conch-logo{
+        display: none;
+    }
+}
+@media screen and (max-width: 700px) and
+(min-width: 625px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 3.5em;
+        left: -10px;
+        font-size: 3.5em;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .main-heading{
+        padding-bottom: 75%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 4em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1.25em;
+        left: -.5em;
+        top: 6em;
+    }
+    .text-section-three{
+        left: 1.25em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 150px;
+        margin-top: 20em;
+        height: 350px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 12em;
+        margin-top: 10em;
+        height: 300px;
+    }
+    .share-your-thoughts{
+        font-size: 1.25em;
+        left: 8%;
+        top: 0px;
+    }
+    #comment{
+        margin-bottom: 12em;
+        top: 0px;
+        left: 10%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: 1.2em;
+        top: -212px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 2.5em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 2.5em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 625px) and
+(min-width: 510px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 4em;
+        left: -10px;
+        font-size: 3.25em;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .main-heading{
+        padding-bottom: 80%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 3.5em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: 1em;
+        left: -.25em;
+        top: 7em;
+    }
+    .text-section-three{
+        left: 1em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 150px;
+        margin-top: 16.5em;
+        height: 300px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 10em;
+        margin-top: 10em;
+        height: 300px;
+    }
+    .share-your-thoughts{
+        font-size: 1em;
+        left: 8%;
+        top: 0px;
+    }
+    #comment{
+        font-size: .9em;
+        margin-bottom: 12em;
+        top: 0px;
+        left: 10%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: 1em;
+        top: -192px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 2.5em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 2.5em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 586px) and
+(min-width: 510px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 4em;
+        left: -10px;
+        font-size: 3em;
+    }
+    .main-heading{
+        padding-bottom: 87.5%;
+    }
+}
+@media screen and (max-width: 550px) and
+(min-width: 510px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 4.5em;
+        left: -10px;
+        font-size: 2.75em;
+    }
+    .main-heading{
+        padding-bottom: 92%;
+    }
+}
+@media screen and (max-width: 510px) and
+(min-width: 410px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .container-fluid a{
+        font-size: .7em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 5.25em;
+        left: -10px;
+        font-size: 2.5em;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .main-heading{
+        padding-bottom: 105%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 3.25em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: .95em;
+        left: -.25em;
+        top: 7em;
+    }
+    .text-section-three{
+        left: 1em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 100px;
+        margin-top: 16.5em;
+        height: 300px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 7em;
+        margin-top: 10em;
+        height: 300px;
+    }
+    .share-your-thoughts{
+        font-size: 1em;
+        left: 6%;
+        top: 0px;
+    }
+    #comment{
+        font-size: .9em;
+        margin-bottom: 12em;
+        top: 0px;
+        left: 10%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: 1em;
+        top: -192px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 2.5em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 2.5em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 488px) and (min-width: 475px){
+    .share-your-thoughts{
+        font-size: .9em;
+        left: 4%;
+        top: 0px;
+    }
+    .main-heading{
+        padding-bottom: 105%;
+    }
+}
+@media screen and (max-width: 475px) and
+(min-width: 410px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .main-heading{
+        padding-bottom: 115%;
+    }
+    .container-fluid a{
+        font-size: .6em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 6em;
+        left: -10px;
+        font-size: 2.25em;
+    }
+    .share-your-thoughts{
+        font-size: .9em;
+        left: 4%;
+        top: 0px;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 3em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: .8em;
+        left: -.25em;
+        top: 7em;
+    }
+    .text-section-three{
+        left: 1em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 80px;
+        margin-top: 16.5em;
+        height: 250px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 5em;
+        margin-top: 5em;
+        height: 250px;
+    }
+    #comment{
+        font-size: .7em;
+        margin-bottom: 12em;
+        top: 80px;
+        left: 5%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: .9em;
+        top: -68px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 2.5em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 2.5em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1.1em;
+    }
+}
+@media screen and (max-width: 433px) and (min-width: 410px){
+    .share-your-thoughts{
+        font-size: .85em;
+        left: 2%;
+        top: 0px;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 7.75em;
+        left: -10px;
+        font-size: 1.9em;
+    }
+    .main-heading{
+        padding-bottom: 127%;
+    }
+}
+@media screen and (max-width: 410px) and
+(min-width: 350px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .container-fluid a{
+        font-size: .5em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 7.25em;
+        left: -10px;
+        font-size: 1.9em;
+    }
+    .share-your-thoughts{
+        font-size: .9em;
+        left: 0;
+        top: 0px;
+    }
+    .main-heading{
+        padding-bottom: 125%;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 2.75em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: .8em;
+        left: -.25em;
+        top: 7em;
+    }
+    .text-section-three{
+        left: .5em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 80px;
+        margin-top: 16.5em;
+        height: 250px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 5em;
+        margin-top: 5em;
+        height: 250px;
+    }
+    #comment{
+        font-size: .7em;
+        margin-bottom: 12em;
+        top: 80px;
+        left: 5%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: .9em;
+        top: -68px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 2em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 2em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 400px) and
+(min-width: 380px){
+    .main-heading{
+        padding-bottom: 135%;
+    }
+}
+@media screen and (max-width: 380px) and
+(min-width: 350px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .main-heading{
+        padding-bottom: 155%;
+    }
+    .container-fluid{
+        gap: 1.5em;
+    }
+    .container-fluid a{
+        font-size: .5em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 8em;
+        left: -10px;
+        font-size: 1.8em;
+    }
+    .share-your-thoughts{
+        font-size: .9em;
+        left: 0;
+        top: 0px;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 2.5em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: .7em;
+        left: -.25em;
+        top: 7em;
+    }
+    .text-section-three{
+        left: .5em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 80px;
+        margin-top: 16.5em;
+        height: 200px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 4em;
+        margin-top: 5em;
+        height: 250px;
+    }
+    #comment{
+        font-size: .7em;
+        margin-bottom: 12em;
+        top: 80px;
+        left: 5%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: .9em;
+        top: -68px;
+        left: 6%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 2em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 2em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 365px) and
+(min-width: 350px){
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 9em;
+        left: -10px;
+        font-size: 1.5em;
+    }
+    .main-heading{
+        padding-bottom: 145%;
+    }
+}
+@media screen and (max-width: 350px) and
+(min-width: 312px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .container-fluid{
+        gap: 1.25em;
+    }
+    .container-fluid a{
+        font-size: .5em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 9.5em;
+        left: -10px;
+        font-size: 1.5em;
+    }
+    .main-heading{
+        padding-bottom: 150%;
+    }
+    .share-your-thoughts{
+        font-size: .85em;
+        left: .5%;
+        top: 0px;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 2.25em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: .65em;
+        left: -.25em;
+        top: 7em;
+    }
+    .text-section-three{
+        left: .5em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 70px;
+        margin-top: 16.5em;
+        height: 200px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: 5em;
+        height: 250px;
+    }
+    #comment{
+        font-size: .7em;
+        margin-bottom: 12em;
+        top: 80px;
+        left: 5%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: .9em;
+        top: -68px;
+        left: 12%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 1.8em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 1.8em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 340px) and
+(min-width: 325px){
+    .main-heading{
+        padding-bottom: 155%;
+    }
+}
+@media screen and (max-width: 325px) and
+(min-width: 312px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .container-fluid{
+        gap: 1em;
+    }
+    .container-fluid a{
+        font-size: .5em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 10.5em;
+        left: -10px;
+        font-size: 1.3em;
+    }
+    .main-heading{
+        padding-bottom: 165%;
+    }
+}
+@media screen and (max-width: 312px) and
+(min-width: 250px){
+    .thought-btn{
+        position: relative;
+        top: -2px;
+    }
+    .container-fluid{
+        gap: .75em;
+    }
+    .container-fluid a{
+        font-size: .5em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 11.5em;
+        left: -10px;
+        font-size: 1.3em;
+    }
+    .main-heading{
+        padding-bottom: 170%;
+    }
+    .share-your-thoughts{
+        font-size: .85em;
+        left: .5%;
+        top: 0px;
+    }
+    .page-two{
+        padding-bottom: 20em;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 2em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: .6em;
+        left: -.25em;
+        top: 7em;
+    }
+    .text-section-three{
+        left: .5em;
+        top: 7em;
+    }
+    .information-section-one,
+    .information-section-two{
+        padding-bottom: 5em;
+    }
+    .information-image{
+        left: 50px;
+        margin-top: 16.5em;
+        height: 200px;
+    }
+    .information-section-three img{
+        margin-top: 30em;
+    }
+    .comment_image{
+        left: 3em;
+        margin-top: 5em;
+        height: 200px;
+    }
+    #comment{
+        font-size: .6em;
+        margin-bottom: 12em;
+        top: 80px;
+        left: 5%;
+        width: 65%;
+    }
+    .share-thought-btn{
+        font-size: .7em;
+        top: -49px;
+        left: 7%;
+    }
+    .footer-flexbox{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .footer-heading-one{
+        height: 1.5em;
+        margin-left: .5em;
+        width: 100%;
+        border: none;
+        font-size: 1.6em;
+    }
+    .join-us{
+        margin-left: .5em;
+        border: none;
+        top: 0px;
+        left: 0;
+        padding-right: 1.25em;
+        font-size: 1.6em;
+    }
+    .contact-us{
+        margin-left: 1.5em;
+        margin-top: 1em;
+        font-size: .95em;
+    }
+}
+@media screen and (max-width: 300px){
+    .container-fluid{
+        gap: .55em;
+    }
+    .text-heading{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 12em;
+        left: -10px;
+        font-size: 1.2em;
+    }
+    .main-heading{
+        padding-bottom: 175%;
+    }
+    .heading-section-one,
+    .heading-section-two,
+    .heading-section-three{
+        font-size: 1.9em;
+        top: 1.75em;
+        left: .65em;
+    }
+    .text-section-one,
+    .text-section-two,
+    .text-section-three{
+        font-size: .55em;
+        left: -.25em;
+        top: 7em;
+    }
+    .information-image{
+        left: 40px;
+        margin-top: 16.5em;
+        height: 200px;
+    }
+}
